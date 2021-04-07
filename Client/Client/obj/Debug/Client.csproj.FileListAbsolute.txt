@@ -1,0 +1,10 @@
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\Client.exe.config
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\Client.exe
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\Client.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\General.dll
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\General.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.csproj.CopyComplete
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.exe
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.pdb
