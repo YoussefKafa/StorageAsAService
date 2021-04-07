@@ -1,0 +1,6 @@
+D:\Projects\C#\StorageAsAservice\General\General\bin\Debug\General.dll
+D:\Projects\C#\StorageAsAservice\General\General\bin\Debug\General.pdb
+D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.csprojAssemblyReference.cache
+D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.csproj.CoreCompileInputs.cache
+D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.dll
+D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.pdb

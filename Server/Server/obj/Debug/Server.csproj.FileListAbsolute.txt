@@ -1,0 +1,12 @@
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\projectDatabase.mdf
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\projectDatabase_log.ldf
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\Server.exe.config
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\Server.exe
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\Server.pdb
+D:\Projects\C#\StorageAsAservice\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\Projects\C#\StorageAsAservice\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Projects\C#\StorageAsAservice\Server\Server\obj\Debug\Server.exe
+D:\Projects\C#\StorageAsAservice\Server\Server\obj\Debug\Server.pdb
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\General.dll
+D:\Projects\C#\StorageAsAservice\Server\Server\bin\Debug\General.pdb
+D:\Projects\C#\StorageAsAservice\Server\Server\obj\Debug\Server.csproj.CopyComplete
