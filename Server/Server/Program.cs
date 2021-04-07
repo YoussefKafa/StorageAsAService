@@ -147,14 +147,21 @@ namespace Server
         {
          
         }
-        public static void openServerConnection()
+        public static void openServerConnectionForAdmin()
         {
             HttpChannel httpChannel = new HttpChannel(5000);
             ChannelServices.RegisterChannel(httpChannel, false);
             RemotingConfiguration.RegisterWellKnownServiceType(typeof(AdminManager), "AdminService.soap", WellKnownObjectMode.Singleton);
             Console.WriteLine("server started");
         }
-       public static Boolean checkIfAdmin(String name, String pass)
+        public static void openServerConnectionForCustomer()
+        {
+            HttpChannel httpChannel = new HttpChannel(5000);
+            ChannelServices.RegisterChannel(httpChannel, false);
+            RemotingConfiguration.RegisterWellKnownServiceType(typeof(CustomerManager), "CustomerService.soap", WellKnownObjectMode.Singleton);
+            Console.WriteLine("server started");
+        }
+        public static Boolean checkIfAdmin(String name, String pass)
         {
             SqlConnection con;
             con = new SqlConnection(connectionString);
