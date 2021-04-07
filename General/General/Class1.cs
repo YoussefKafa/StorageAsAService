@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 using System.Data;
 namespace General
 {
-    public interface IAdminManager
+    public interface IRequestsManager
     {
        void addCustomer(Customer customer);
         void removeCustomer(int id);
         DataTable findAll();
-    }
-   public interface ICustomerManager
-    {
+        Boolean checkAdmin(String username, String password);
+        //
         void updateCustomer(Customer customer);
         DataTable findAll(int customerId);
         void addFile(File file);

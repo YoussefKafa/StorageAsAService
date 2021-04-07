@@ -4,3 +4,9 @@ D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.csprojAssembl
 D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.csproj.CoreCompileInputs.cache
 D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.dll
 D:\Projects\C#\StorageAsAservice\General\General\obj\Debug\General.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\bin\Debug\General.dll
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\bin\Debug\General.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\obj\Debug\General.csprojAssemblyReference.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\obj\Debug\General.csproj.CoreCompileInputs.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\obj\Debug\General.dll
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\obj\Debug\General.pdb

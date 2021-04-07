@@ -16,16 +16,11 @@ namespace Server
     class Program
     {
         static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsAservice\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
-        public class AdminManager : MarshalByRefObject, IAdminManager
+
+        public class RequestManager : MarshalByRefObject, IRequestsManager
         {
-
-            public AdminManager()
-            {
-                Console.WriteLine("Constructing AdminManager Server..");
-            }
-
             public void addCustomer(Customer customer)
-            {          
+            {
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
                 con.Open();
@@ -38,6 +33,11 @@ namespace Server
                 cmd1.Parameters.Add("@p", customer.photo);
                 cmd1.ExecuteNonQuery();
                 con.Close();
+            }
+
+            public bool checkAdmin(string username, string password)
+            {
+                return Program.checkIfAdmin(username, password);
             }
 
             public DataTable findAll()
@@ -57,19 +57,10 @@ namespace Server
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
                 con.Open();
-                SqlCommand cmd1 = new SqlCommand("delete from customer where id="+id+";", con);
+                SqlCommand cmd1 = new SqlCommand("delete from customer where id=" + id + ";", con);
                 cmd1.ExecuteNonQuery();
                 con.Close();
             }
-        }
-        public class CustomerManager : MarshalByRefObject, ICustomerManager
-        {
-
-            public CustomerManager()
-            {
-                Console.WriteLine("Constructing CustomerManager Server..");
-            }
-
             public void addFile(File file)
             {
                 SqlConnection con;
@@ -79,10 +70,10 @@ namespace Server
                 cmd1.Parameters.Add("@ty", file.type);
                 cmd1.Parameters.Add("@si", file.size);
                 cmd1.Parameters.Add("@su", file.subject);
-                cmd1.Parameters.Add("@av",file.availability);
+                cmd1.Parameters.Add("@av", file.availability);
                 cmd1.Parameters.Add("@cu", file.customerId);
                 cmd1.ExecuteNonQuery();
-                con.Close(); 
+                con.Close();
             }
 
             public DataTable findAll(int customerId)
@@ -90,7 +81,7 @@ namespace Server
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
                 con.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from [file] where customerId="+customerId+";", con);
+                SqlDataAdapter adapt = new SqlDataAdapter("select * from [file] where customerId=" + customerId + ";", con);
                 DataTable table = new DataTable();
                 _ = adapt.Fill(table);
                 con.Close();
@@ -108,9 +99,9 @@ namespace Server
                 File file = new File();
                 DataRow fileData = table.Rows[0];
                 file.type = fileData[1].ToString();
-                 file.size = (string)fileData[2];
-                 file.subject = (string)fileData[3];
-                 file.availability = Boolean.Parse(fileData[4].ToString());
+                file.size = (string)fileData[2];
+                file.subject = (string)fileData[3];
+                file.availability = Boolean.Parse(fileData[4].ToString());
                 file.customerId = (int)fileData[5];
                 con.Close();
                 return file;
@@ -143,6 +134,8 @@ namespace Server
                 con.Close();
             }
         }
+  
+           
         static void Main(string[] args)
         {
          
@@ -151,14 +144,7 @@ namespace Server
         {
             HttpChannel httpChannel = new HttpChannel(5000);
             ChannelServices.RegisterChannel(httpChannel, false);
-            RemotingConfiguration.RegisterWellKnownServiceType(typeof(AdminManager), "AdminService.soap", WellKnownObjectMode.Singleton);
-            Console.WriteLine("server started");
-        }
-        public static void openServerConnectionForCustomer()
-        {
-            HttpChannel httpChannel = new HttpChannel(5000);
-            ChannelServices.RegisterChannel(httpChannel, false);
-            RemotingConfiguration.RegisterWellKnownServiceType(typeof(CustomerManager), "CustomerService.soap", WellKnownObjectMode.Singleton);
+            RemotingConfiguration.RegisterWellKnownServiceType(typeof(RequestManager), "MyService.soap", WellKnownObjectMode.Singleton);
             Console.WriteLine("server started");
         }
         public static Boolean checkIfAdmin(String name, String pass)
