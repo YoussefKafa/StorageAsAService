@@ -15,9 +15,9 @@ namespace Server
 {
     class Program
     {
-        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsAservice\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
-        public class RequestManager : MarshalByRefObject, IRequestsManager
+        public class AdminManager : MarshalByRefObject, IAdminManager
         {
             public void addCustomer(Customer customer)
             {
@@ -35,10 +35,7 @@ namespace Server
                 con.Close();
             }
 
-            public bool checkAdmin(string username, string password)
-            {
-                return Program.checkIfAdmin(username, password);
-            }
+           
 
             public DataTable findAll()
             {
@@ -49,6 +46,7 @@ namespace Server
                 DataTable table = new DataTable();
                 _ = adapt.Fill(table);
                 con.Close();
+                Console.WriteLine("access to findAll");
                 return table;
             }
 
@@ -61,6 +59,11 @@ namespace Server
                 cmd1.ExecuteNonQuery();
                 con.Close();
             }
+            
+        }
+
+        public class CustomerManager : MarshalByRefObject, ICustomerManager
+        {
             public void addFile(File file)
             {
                 SqlConnection con;
@@ -133,19 +136,29 @@ namespace Server
                 cmd1.ExecuteNonQuery();
                 con.Close();
             }
+            public bool checkAdmin(string username, string password)
+            {
+                if (Program.checkIfAdmin(username, password))
+                {
+                    RemotingConfiguration.RegisterWellKnownServiceType(typeof(AdminManager), "MyAdminService.soap", WellKnownObjectMode.Singleton);
+                    Console.WriteLine("admin server started");
+                    return true;
+                }
+                return false;
+            }
         }
-  
-           
-        static void Main(string[] args)
+                static void Main(string[] args)
         {
-         
+            openServerConnectionForCustomer();
         }
-        public static void openServerConnectionForAdmin()
+                
+        public static void openServerConnectionForCustomer()
         {
             HttpChannel httpChannel = new HttpChannel(5000);
             ChannelServices.RegisterChannel(httpChannel, false);
-            RemotingConfiguration.RegisterWellKnownServiceType(typeof(RequestManager), "MyService.soap", WellKnownObjectMode.Singleton);
-            Console.WriteLine("server started");
+            RemotingConfiguration.RegisterWellKnownServiceType(typeof(CustomerManager), "MyCustomerService.soap", WellKnownObjectMode.Singleton);
+            Console.WriteLine("customer server started");
+            Console.ReadKey();
         }
         public static Boolean checkIfAdmin(String name, String pass)
         {

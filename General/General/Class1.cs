@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 using System.Data;
 namespace General
 {
-    public interface IRequestsManager
+    public interface IAdminManager
     {
        void addCustomer(Customer customer);
         void removeCustomer(int id);
         DataTable findAll();
-        Boolean checkAdmin(String username, String password);
+   
         //
+        
+    }
+    public interface ICustomerManager
+    {
         void updateCustomer(Customer customer);
         DataTable findAll(int customerId);
         void addFile(File file);
         void removeFile(int fileId);
         File getFile(int fileId);
+        Boolean checkAdmin(String username, String password);
     }
-
-    [Serializable]
+        [Serializable]
     public class Customer
     {
         public String id { get; set; }
