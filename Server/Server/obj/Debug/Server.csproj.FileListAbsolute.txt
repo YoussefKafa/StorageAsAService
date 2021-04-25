@@ -37,3 +37,6 @@ C:\Users\Kafa\Desktop\StorageAsAService\Server\Server\obj\Debug\Server.pdb
 C:\Users\Kafa\Desktop\StorageAsAService\Server\Server\bin\Debug\General.dll.config
 C:\Users\Kafa\Desktop\StorageAsAService\Server\Server\obj\Debug\Server.Program.resources
 C:\Users\Kafa\Desktop\StorageAsAService\Server\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\bin\Debug\General.dll.config
+D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\obj\Debug\Server.Program.resources
+D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\obj\Debug\Server.csproj.GenerateResource.cache

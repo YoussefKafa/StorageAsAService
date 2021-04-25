@@ -13,7 +13,8 @@ namespace Client
 {
    public partial class Program :Form
     {
-        
+        ICustomerManager proxy = (ICustomerManager)Activator.GetObject(typeof(ICustomerManager), "http://localhost:5000/MyCustomerService.soap");
+        IAdminManager proxy2 = (IAdminManager)Activator.GetObject(typeof(IAdminManager), "http://localhost:5000/MyAdminService.soap");
         private Button button1;
         private Button button3;
         private Button button4;
@@ -161,6 +162,7 @@ namespace Client
             this.button6.TabIndex = 5;
             this.button6.Text = "Add File";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -170,6 +172,7 @@ namespace Client
             this.button7.TabIndex = 6;
             this.button7.Text = "RemoveFile";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -450,19 +453,20 @@ namespace Client
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ICustomerManager proxy = (ICustomerManager)Activator.GetObject(typeof(ICustomerManager), "http://localhost:5000/MyCustomerService.soap");
-            Console.WriteLine("Connected to Customer Services.");
+            try { Boolean s = proxy.checkAdmin("admin", "admin"); }
+              catch (System.Net.WebException)
+            {
+                Console.WriteLine("Unable to connect to server, please try again later..");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e) 
         {
             try
             {
-                ICustomerManager proxy = (ICustomerManager)Activator.GetObject(typeof(ICustomerManager), "http://localhost:5000/MyCustomerService.soap");
                 Boolean s = proxy.checkAdmin("adamin", "admin");
                 if (s)
                 {
-                    IAdminManager proxy2 = (IAdminManager)Activator.GetObject(typeof(IAdminManager), "http://localhost:5000/MyAdminService.soap");
                     Console.WriteLine("Connected to Admin Services.");
                 }
                 else
@@ -483,6 +487,15 @@ namespace Client
         }
 
         private void Program_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button7_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,3 +10,4 @@ D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client
 D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.pdb
 D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.Program.resources
 D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\Client\Client\bin\Debug\General.dll.config
