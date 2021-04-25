@@ -5,21 +5,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Data.SqlClient;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
+using System.ServiceModel;
 using General;
+using System.Diagnostics;
 namespace Server
 {
-    class Program
+    class Program 
     {
+      public  static void Main(String[] args)
+        {
+            string val;
+            starting:
+            Console.WriteLine("____________________________________________________ ");
+            Console.WriteLine("-If you want to run WCF Server please enter 1. ");
+            Console.WriteLine("-If you want to run Remoting Server please enter 2. ");
+            Console.WriteLine("-If you want to exit please enter 3. ");
+            Console.WriteLine("____________________________________________________ ");
+            Console.WriteLine("Enter Here:  ");
+            val = Console.ReadLine();
+            if (val == "1")
+            {
+                using (System.ServiceModel.ServiceHost host = new
+             System.ServiceModel.ServiceHost(typeof(Server.CustomerWcf)))
+                {
+                    host.Open();
+                    Console.WriteLine("Host started @ " + DateTime.Now.ToString());
+                    Console.WriteLine("-press any key to exit WCF server. ");
+                    Console.ReadKey();
+                    goto starting;
+                }
+            }
+            else if (val == "2") {
+                openServerConnectionForCustomer();
+                Console.WriteLine("-press any key to exit Remoting server. ");
+                Console.ReadKey();
+                goto starting;
+            }
+            else if (val == "3")
+            {
+                Console.WriteLine("exit.. ");
+            }
+        }
         static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         public class AdminManager : MarshalByRefObject, IAdminManager
         {
-            public void addCustomer(Customer customer)
+            public void addCustomer(General.Customer customer)
             {
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
@@ -120,7 +155,7 @@ namespace Server
                 con.Close();
             }
 
-            public void updateCustomer(Customer customer)
+            public void updateCustomer(General.Customer customer)
             {
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
@@ -147,10 +182,7 @@ namespace Server
                 return false;
             }
         }
-                static void Main(string[] args)
-        {
-            openServerConnectionForCustomer();
-        }
+           
                 
         public static void openServerConnectionForCustomer()
         {
@@ -158,7 +190,7 @@ namespace Server
             ChannelServices.RegisterChannel(httpChannel, false);
             RemotingConfiguration.RegisterWellKnownServiceType(typeof(CustomerManager), "MyCustomerService.soap", WellKnownObjectMode.Singleton);
             Console.WriteLine("customer server started");
-            Console.ReadKey();
+     
         }
         public static Boolean checkIfAdmin(String name, String pass)
         {
@@ -173,5 +205,7 @@ namespace Server
             con.Close();
             return Boolean.Parse(res1);
         }
+
+        
     }
 }

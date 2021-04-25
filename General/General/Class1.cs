@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.ServiceModel;
+using System.Runtime.Serialization;
+
 namespace General
 {
     public interface IAdminManager
@@ -11,9 +14,6 @@ namespace General
        void addCustomer(Customer customer);
         void removeCustomer(int id);
         DataTable findAll();
-   
-        //
-        
     }
     public interface ICustomerManager
     {
@@ -24,7 +24,9 @@ namespace General
         File getFile(int fileId);
         Boolean checkAdmin(String username, String password);
     }
-        [Serializable]
+
+    [Serializable]
+        [DataContractFormat]
     public class Customer
     {
         public String id { get; set; }
@@ -39,13 +41,20 @@ namespace General
      
 
     [Serializable]
+   [DataContract]
     public class File
     {
+        [DataMember]
         public String id { get; set; }
+        [DataMember]
         public String type { get; set; }
+        [DataMember]
         public String size { get; set; }
+        [DataMember]
         public String subject { get; set; }
+        [DataMember]
         public Boolean availability { get; set; }
+        [DataMember]
         public int customerId { get; set; }
     }
 }

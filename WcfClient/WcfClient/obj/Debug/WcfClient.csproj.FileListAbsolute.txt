@@ -1,0 +1,17 @@
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe.config
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csprojAssemblyReference.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.CoreCompileInputs.cache
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.exe
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.pdb
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.pdb
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csprojAssemblyReference.cache
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.CoreCompileInputs.cache
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.exe
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.pdb
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.Program.resources
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.GenerateResource.cache
+C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.AdminForm.resources
