@@ -15,3 +15,6 @@ C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.
 C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.Program.resources
 C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.GenerateResource.cache
 C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.AdminForm.resources
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.AdminForm.resources
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.Program.resources
+D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.GenerateResource.cache
