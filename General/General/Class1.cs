@@ -25,7 +25,7 @@ namespace General
         Boolean checkAdmin(String username, String password);
     }
 
-    [Serializable]
+        [Serializable]
         [DataContractFormat]
     public class Customer
     {

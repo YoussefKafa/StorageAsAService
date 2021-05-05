@@ -17,3 +17,4 @@ C:\Users\Kafa\Desktop\StorageAsAService\General\General\obj\Debug\General.csproj
 C:\Users\Kafa\Desktop\StorageAsAService\General\General\obj\Debug\General.csproj.CoreCompileInputs.cache
 C:\Users\Kafa\Desktop\StorageAsAService\General\General\obj\Debug\General.dll
 C:\Users\Kafa\Desktop\StorageAsAService\General\General\obj\Debug\General.pdb
+D:\Projects\C#\StorageAsService\StorageAsAService\General\General\bin\Debug\General.dll.config

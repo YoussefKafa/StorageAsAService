@@ -54,6 +54,7 @@ namespace Server
 
         public class AdminManager : MarshalByRefObject, IAdminManager
         {
+            
             public void addCustomer(General.Customer customer)
             {
                 SqlConnection con;
@@ -69,8 +70,7 @@ namespace Server
                 cmd1.ExecuteNonQuery();
                 con.Close();
             }
-
-           
+            
 
             public DataTable findAll()
             {
