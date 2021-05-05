@@ -27,7 +27,6 @@ namespace Client
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
@@ -49,6 +48,7 @@ namespace Client
         private TextBox textBox21;
         private TextBox textBox22;
         private DataGridView dataGridView2;
+        private ComboBox comboBox1;
         private Button button2;
 
         public Program()
@@ -79,7 +79,6 @@ namespace Client
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -101,6 +100,7 @@ namespace Client
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +108,7 @@ namespace Client
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(729, 19);
+            this.button1.Location = new System.Drawing.Point(1030, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 40);
             this.button1.TabIndex = 0;
@@ -119,7 +119,7 @@ namespace Client
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(152, 12);
+            this.button2.Location = new System.Drawing.Point(257, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 40);
             this.button2.TabIndex = 1;
@@ -129,36 +129,39 @@ namespace Client
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(509, 65);
+            this.button3.Location = new System.Drawing.Point(810, 62);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 51);
             this.button3.TabIndex = 2;
             this.button3.Text = "Add Customer";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(509, 144);
+            this.button4.Location = new System.Drawing.Point(810, 141);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 37);
             this.button4.TabIndex = 3;
             this.button4.Text = "Remove Customer";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(509, 212);
+            this.button5.Location = new System.Drawing.Point(810, 209);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 23);
             this.button5.TabIndex = 4;
             this.button5.Text = "Find All";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 65);
+            this.button6.Location = new System.Drawing.Point(85, 62);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(107, 23);
             this.button6.TabIndex = 5;
             this.button6.Text = "Add File";
             this.button6.UseVisualStyleBackColor = true;
@@ -166,9 +169,9 @@ namespace Client
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(12, 94);
+            this.button7.Location = new System.Drawing.Point(85, 91);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(107, 23);
             this.button7.TabIndex = 6;
             this.button7.Text = "RemoveFile";
             this.button7.UseVisualStyleBackColor = true;
@@ -176,164 +179,160 @@ namespace Client
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(12, 123);
+            this.button8.Location = new System.Drawing.Point(85, 120);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(107, 23);
             this.button8.TabIndex = 7;
             this.button8.Text = "Get File";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(12, 212);
+            this.button9.Location = new System.Drawing.Point(85, 209);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(107, 23);
             this.button9.TabIndex = 8;
             this.button9.Text = "Find All";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(12, 152);
+            this.button10.Location = new System.Drawing.Point(85, 149);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 46);
+            this.button10.Size = new System.Drawing.Size(107, 46);
             this.button10.TabIndex = 9;
             this.button10.Text = "Update Customer";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 67);
+            this.textBox1.Location = new System.Drawing.Point(198, 64);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 20);
+            this.textBox1.Size = new System.Drawing.Size(74, 24);
             this.textBox1.TabIndex = 10;
             this.textBox1.Text = "type";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 67);
+            this.textBox2.Location = new System.Drawing.Point(278, 64);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 20);
+            this.textBox2.Size = new System.Drawing.Size(74, 24);
             this.textBox2.TabIndex = 11;
             this.textBox2.Text = "size";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 68);
+            this.textBox3.Location = new System.Drawing.Point(358, 65);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 20);
+            this.textBox3.Size = new System.Drawing.Size(74, 24);
             this.textBox3.TabIndex = 12;
             this.textBox3.Text = "subject";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(333, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(74, 20);
-            this.textBox4.TabIndex = 13;
-            this.textBox4.Text = "availability";
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(413, 68);
+            this.textBox5.Location = new System.Drawing.Point(579, 65);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(74, 20);
+            this.textBox5.Size = new System.Drawing.Size(74, 24);
             this.textBox5.TabIndex = 14;
             this.textBox5.Text = "customerID";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(93, 97);
+            this.textBox6.Location = new System.Drawing.Point(198, 94);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(74, 20);
+            this.textBox6.Size = new System.Drawing.Size(74, 24);
             this.textBox6.TabIndex = 15;
             this.textBox6.Text = "file ID";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(93, 126);
+            this.textBox7.Location = new System.Drawing.Point(198, 123);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(74, 20);
+            this.textBox7.Size = new System.Drawing.Size(74, 24);
             this.textBox7.TabIndex = 16;
             this.textBox7.Text = "file ID";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(253, 152);
+            this.textBox8.Location = new System.Drawing.Point(358, 149);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(74, 20);
+            this.textBox8.Size = new System.Drawing.Size(74, 24);
             this.textBox8.TabIndex = 17;
             this.textBox8.Text = "maxQuota";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(333, 152);
+            this.textBox9.Location = new System.Drawing.Point(438, 149);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(74, 20);
+            this.textBox9.Size = new System.Drawing.Size(74, 24);
             this.textBox9.TabIndex = 18;
             this.textBox9.Text = "currentQuota";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(173, 152);
+            this.textBox10.Location = new System.Drawing.Point(278, 149);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(74, 20);
+            this.textBox10.Size = new System.Drawing.Size(74, 24);
             this.textBox10.TabIndex = 19;
             this.textBox10.Text = "email";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(93, 152);
+            this.textBox11.Location = new System.Drawing.Point(198, 149);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(74, 20);
+            this.textBox11.Size = new System.Drawing.Size(74, 24);
             this.textBox11.TabIndex = 20;
             this.textBox11.Text = "full Name";
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(173, 178);
+            this.textBox12.Location = new System.Drawing.Point(278, 175);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(74, 20);
+            this.textBox12.Size = new System.Drawing.Size(74, 24);
             this.textBox12.TabIndex = 21;
             this.textBox12.Text = "customer ID";
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(93, 178);
+            this.textBox13.Location = new System.Drawing.Point(198, 175);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(74, 20);
+            this.textBox13.Size = new System.Drawing.Size(74, 24);
             this.textBox13.TabIndex = 22;
             this.textBox13.Text = "Photo URI";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(413, 152);
+            this.textBox14.Location = new System.Drawing.Point(518, 149);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(74, 20);
+            this.textBox14.Size = new System.Drawing.Size(74, 24);
             this.textBox14.TabIndex = 23;
             this.textBox14.Text = "serviceClass";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(93, 215);
+            this.textBox15.Location = new System.Drawing.Point(198, 209);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(74, 20);
+            this.textBox15.Size = new System.Drawing.Size(74, 24);
             this.textBox15.TabIndex = 24;
             this.textBox15.Text = "customer ID";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 252);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 249);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 244);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(686, 244);
             this.dataGridView1.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(493, -1);
+            this.label1.Location = new System.Drawing.Point(704, -22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 629);
             this.label1.TabIndex = 26;
@@ -341,71 +340,84 @@ namespace Client
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(611, 67);
+            this.textBox16.Location = new System.Drawing.Point(912, 64);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(74, 20);
+            this.textBox16.Size = new System.Drawing.Size(74, 24);
             this.textBox16.TabIndex = 27;
             this.textBox16.Text = "full Name";
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(851, 67);
+            this.textBox17.Location = new System.Drawing.Point(1152, 64);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(74, 20);
+            this.textBox17.Size = new System.Drawing.Size(74, 24);
             this.textBox17.TabIndex = 28;
             this.textBox17.Text = "currentQuota";
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(771, 68);
+            this.textBox18.Location = new System.Drawing.Point(1072, 65);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(74, 20);
+            this.textBox18.Size = new System.Drawing.Size(74, 24);
             this.textBox18.TabIndex = 29;
             this.textBox18.Text = "maxQuota";
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(691, 68);
+            this.textBox19.Location = new System.Drawing.Point(992, 65);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(74, 20);
+            this.textBox19.Size = new System.Drawing.Size(74, 24);
             this.textBox19.TabIndex = 30;
             this.textBox19.Text = "email";
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(611, 97);
+            this.textBox20.Location = new System.Drawing.Point(912, 94);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(74, 20);
+            this.textBox20.Size = new System.Drawing.Size(74, 24);
             this.textBox20.TabIndex = 31;
             this.textBox20.Text = "serviceClass";
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(691, 96);
+            this.textBox21.Location = new System.Drawing.Point(992, 93);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(74, 20);
+            this.textBox21.Size = new System.Drawing.Size(74, 24);
             this.textBox21.TabIndex = 32;
             this.textBox21.Text = "photo URI";
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(611, 153);
+            this.textBox22.Location = new System.Drawing.Point(912, 150);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(74, 20);
+            this.textBox22.Size = new System.Drawing.Size(74, 24);
             this.textBox22.TabIndex = 33;
             this.textBox22.Text = "customer ID";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(509, 252);
+            this.dataGridView2.Location = new System.Drawing.Point(720, 249);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(475, 244);
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(639, 244);
             this.dataGridView2.TabIndex = 34;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Private",
+            "Public"});
+            this.comboBox1.Location = new System.Drawing.Point(438, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 35;
             // 
             // Program
             // 
-            this.ClientSize = new System.Drawing.Size(993, 505);
+            this.ClientSize = new System.Drawing.Size(1371, 505);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox21);
@@ -427,7 +439,6 @@ namespace Client
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -493,11 +504,70 @@ namespace Client
 
         private void button6_Click(object sender, EventArgs e)
         {
+            File file = new File();
+            file.customerId = Int32.Parse(textBox5.Text);
+            if (comboBox1.SelectedIndex == 1)
+            {
+                file.availability = true;
+            }
+            else
+            {
+                file.availability = false;
+            }
+            file.subject = textBox3.Text;
+            file.size = textBox2.Text;
+            file.type = textBox1.Text;
+            proxy.addFile(file);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            proxy.removeFile(Int32.Parse(textBox6.Text));
+        }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            proxy.getFile(Int32.Parse(textBox7.Text));
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.fullName = textBox11.Text;
+            customer.email = textBox10.Text;
+            customer.maxQuota = textBox8.Text;
+            customer.currentQuota = textBox9.Text;
+            customer.serviceClass = textBox14.Text;
+            customer.photo = textBox13.Text;
+            customer.id = textBox12.Text;
+            proxy.updateCustomer(customer);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = proxy.findAll(Int32.Parse(textBox15.Text));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.fullName = textBox16.Text;
+            customer.email = textBox19.Text;
+            customer.maxQuota = textBox18.Text;
+            customer.currentQuota = textBox17.Text;
+            customer.serviceClass = textBox20.Text;
+            customer.photo = textBox21.Text;
+            proxy2.addCustomer(customer);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            proxy2.removeCustomer(Int32.Parse(textBox22.Text));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = proxy2.findAll();
         }
     }
 }
