@@ -545,7 +545,9 @@ namespace Client
 
         private void button9_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = proxy.findAll(Int32.Parse(textBox15.Text));
+            try {dataGridView1.DataSource = proxy.findAll(Int32.Parse(textBox15.Text)); }
+            catch { }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
