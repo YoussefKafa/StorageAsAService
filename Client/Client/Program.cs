@@ -568,6 +568,7 @@ namespace Client
         private void button5_Click(object sender, EventArgs e)
         {
             dataGridView2.DataSource = proxy2.findAll();
+
         }
     }
 }

@@ -30,7 +30,7 @@ namespace General
     public class Customer
     {
         public String id { get; set; }
-      public  String fullName { get; set; }
+        public  String fullName { get; set; }
         public String email { get; set; }
         public String maxQuota { get; set; }
         public String currentQuota { get; set; }

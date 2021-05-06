@@ -18,3 +18,13 @@ C:\Users\Kafa\Desktop\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.
 D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.AdminForm.resources
 D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.Program.resources
 D:\Projects\C#\StorageAsService\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.GenerateResource.cache
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.exe
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\bin\Debug\WcfClient.pdb
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.AdminForm.resources
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.Program.resources
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.GenerateResource.cache
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.exe
+C:\Users\Asus\Documents\GitHub\StorageAsAService\WcfClient\WcfClient\obj\Debug\WcfClient.pdb
