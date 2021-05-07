@@ -49,6 +49,11 @@ namespace Client
         private TextBox textBox22;
         private DataGridView dataGridView2;
         private ComboBox comboBox1;
+        private Label label2;
+        private Label label3;
+        private TextBox textBox4;
+        private TextBox textBox23;
+        private Button button11;
         private Button button2;
 
         public Program()
@@ -101,6 +106,11 @@ namespace Client
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +139,7 @@ namespace Client
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(810, 62);
+            this.button3.Location = new System.Drawing.Point(720, 67);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 51);
             this.button3.TabIndex = 2;
@@ -139,7 +149,7 @@ namespace Client
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(810, 141);
+            this.button4.Location = new System.Drawing.Point(720, 146);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 37);
             this.button4.TabIndex = 3;
@@ -149,7 +159,7 @@ namespace Client
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(810, 209);
+            this.button5.Location = new System.Drawing.Point(720, 214);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 23);
             this.button5.TabIndex = 4;
@@ -340,7 +350,7 @@ namespace Client
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(912, 64);
+            this.textBox16.Location = new System.Drawing.Point(822, 69);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(74, 24);
             this.textBox16.TabIndex = 27;
@@ -348,7 +358,7 @@ namespace Client
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(1152, 64);
+            this.textBox17.Location = new System.Drawing.Point(1062, 69);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(74, 24);
             this.textBox17.TabIndex = 28;
@@ -356,7 +366,7 @@ namespace Client
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(1072, 65);
+            this.textBox18.Location = new System.Drawing.Point(982, 70);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(74, 24);
             this.textBox18.TabIndex = 29;
@@ -364,7 +374,7 @@ namespace Client
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(992, 65);
+            this.textBox19.Location = new System.Drawing.Point(902, 70);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(74, 24);
             this.textBox19.TabIndex = 30;
@@ -372,7 +382,7 @@ namespace Client
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(912, 94);
+            this.textBox20.Location = new System.Drawing.Point(822, 99);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(74, 24);
             this.textBox20.TabIndex = 31;
@@ -380,7 +390,7 @@ namespace Client
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(992, 93);
+            this.textBox21.Location = new System.Drawing.Point(902, 98);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(74, 24);
             this.textBox21.TabIndex = 32;
@@ -388,7 +398,7 @@ namespace Client
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(912, 150);
+            this.textBox22.Location = new System.Drawing.Point(822, 155);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(74, 24);
             this.textBox22.TabIndex = 33;
@@ -414,9 +424,56 @@ namespace Client
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 35;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1111, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "username";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1113, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "password";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(1185, 155);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 24);
+            this.textBox4.TabIndex = 38;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(1185, 191);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 24);
+            this.textBox23.TabIndex = 39;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(1196, 220);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 40;
+            this.button11.Text = "Login";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Program
             // 
             this.ClientSize = new System.Drawing.Size(1371, 505);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox22);
@@ -464,31 +521,31 @@ namespace Client
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try { Boolean s = proxy.checkAdmin("admin", "admin"); }
-              catch (System.Net.WebException)
-            {
-                Console.WriteLine("Unable to connect to server, please try again later..");
-            }
+            //try { Boolean s = proxy.checkAdmin("admin", "admin"); }
+            //  catch (System.Net.WebException)
+            //{
+            //    Console.WriteLine("Unable to connect to server, please try again later..");
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e) 
         {
-            try
-            {
-                Boolean s = proxy.checkAdmin("adamin", "admin");
-                if (s)
-                {
-                    Console.WriteLine("Connected to Admin Services.");
-                }
-                else
-                {
-                    Console.WriteLine("Wrong user name or password");
-                }
-            }
-            catch (System.Net.WebException)
-            {
-                Console.WriteLine("Unable to connect to server, please try again later..");
-            }
+            //try
+            //{
+            //    Boolean s = proxy.checkAdmin("adamin", "admin");
+            //    if (s)
+            //    {
+            //        Console.WriteLine("Connected to Admin Services.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Wrong user name or password");
+            //    }
+            //}
+            //catch (System.Net.WebException)
+            //{
+            //    Console.WriteLine("Unable to connect to server, please try again later..");
+            //}
           
         }
 
@@ -504,6 +561,8 @@ namespace Client
 
         private void button6_Click(object sender, EventArgs e)
         {
+            try
+            {
             File file = new File();
             file.customerId = Int32.Parse(textBox5.Text);
             if (comboBox1.SelectedIndex == 1)
@@ -518,20 +577,26 @@ namespace Client
             file.size = textBox2.Text;
             file.type = textBox1.Text;
             proxy.addFile(file);
+            }
+            catch { }
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            proxy.removeFile(Int32.Parse(textBox6.Text));
+            try { proxy.removeFile(Int32.Parse(textBox6.Text));} catch { }
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource= proxy.getFile(Int32.Parse(textBox7.Text));
+            try { dataGridView1.DataSource= proxy.getFile(Int32.Parse(textBox7.Text));} catch { }
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            
             Customer customer = new Customer();
             customer.fullName = textBox11.Text;
             customer.email = textBox10.Text;
@@ -540,7 +605,8 @@ namespace Client
             customer.serviceClass = textBox14.Text;
             customer.photo = textBox13.Text;
             customer.id = textBox12.Text;
-            proxy.updateCustomer(customer);
+            try {proxy.updateCustomer(customer); } catch { }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -559,18 +625,41 @@ namespace Client
             customer.currentQuota = textBox17.Text;
             customer.serviceClass = textBox20.Text;
             customer.photo = textBox21.Text;
-            proxy2.addCustomer(customer);
+            try { proxy2.addCustomer(customer);} catch { }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            proxy2.removeCustomer(Int32.Parse(textBox22.Text));
+            try {proxy2.removeCustomer(Int32.Parse(textBox22.Text)); } catch { }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = proxy2.findAll();
+            try { dataGridView2.DataSource = proxy2.findAll();} catch { }
+            
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Boolean s = proxy.checkAdmin(textBox4.Text, textBox23.Text);
+                if (s)
+                {
+                    Console.WriteLine("Connected to Admin Services.");
+                }
+                else
+                {
+                    Console.WriteLine("Wrong user name or password");
+                }
+            }
+            catch (System.Net.WebException)
+            {
+                Console.WriteLine("Unable to connect to server, please try again later..");
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace General
 {
     public interface IAdminManager
     {
-       void addCustomer(Customer customer);
+        void addCustomer(Customer customer);
         void removeCustomer(int id);
         DataTable findAll();
     }
