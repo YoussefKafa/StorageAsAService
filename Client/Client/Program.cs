@@ -527,7 +527,7 @@ namespace Client
 
         private void button8_Click(object sender, EventArgs e)
         {
-            proxy.getFile(Int32.Parse(textBox7.Text));
+            dataGridView1.DataSource= proxy.getFile(Int32.Parse(textBox7.Text));
         }
 
         private void button10_Click(object sender, EventArgs e)

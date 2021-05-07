@@ -21,7 +21,7 @@ namespace General
         DataTable findAll(int customerId);
         void addFile(File file);
         void removeFile(int fileId);
-        File getFile(int fileId);
+        DataTable getFile(int fileId);
         Boolean checkAdmin(String username, String password);
     }
 
