@@ -11,7 +11,7 @@ namespace Server
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class CustomerWcf : ICustomerWcf
     {
-        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kafa\Desktop\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         public bool checkAdmin(string name, string pass)
         {
@@ -32,11 +32,17 @@ namespace Server
             SqlConnection con;
             con = new SqlConnection(connectionString);
             con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from [customer] where currentQuota like @x;", con);
-            adapt.SelectCommand.Parameters.AddWithValue("@x", "%" + "90" + "%");
-            DataTable table = new DataTable("resultTable");
+            SqlDataAdapter adapt = new SqlDataAdapter("select * from [customer]", con);
+            DataTable table = new DataTable("table");
             _ = adapt.Fill(table);
             con.Close();
+            foreach (DataRow row in table.Rows)
+            {
+                int x = int.Parse(row.ItemArray[4].ToString());
+                int y = int.Parse(row.ItemArray[3].ToString());
+                double z = (x * 100) / y;
+               if(!(z>=90)) { row.Delete(); }
+            }
             return table;
         }
 
