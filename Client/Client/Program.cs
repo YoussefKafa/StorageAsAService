@@ -30,21 +30,17 @@ namespace Client
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
-        private TextBox textBox8;
         private TextBox textBox9;
         private TextBox textBox10;
         private TextBox textBox11;
         private TextBox textBox12;
         private TextBox textBox13;
-        private TextBox textBox14;
         private TextBox textBox15;
         private DataGridView dataGridView1;
         private Label label1;
         private TextBox textBox16;
         private TextBox textBox17;
-        private TextBox textBox18;
         private TextBox textBox19;
-        private TextBox textBox20;
         private TextBox textBox21;
         private TextBox textBox22;
         private DataGridView dataGridView2;
@@ -54,6 +50,8 @@ namespace Client
         private TextBox textBox4;
         private TextBox textBox23;
         private Button button11;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
         private Button button2;
 
         public Program()
@@ -87,21 +85,17 @@ namespace Client
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -111,6 +105,8 @@ namespace Client
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -266,19 +262,11 @@ namespace Client
             this.textBox7.TabIndex = 16;
             this.textBox7.Text = "file ID";
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(358, 149);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(74, 24);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.Text = "maxQuota";
-            // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(438, 149);
+            this.textBox9.Location = new System.Drawing.Point(452, 149);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(74, 24);
+            this.textBox9.Size = new System.Drawing.Size(88, 24);
             this.textBox9.TabIndex = 18;
             this.textBox9.Text = "currentQuota";
             // 
@@ -313,14 +301,6 @@ namespace Client
             this.textBox13.Size = new System.Drawing.Size(74, 24);
             this.textBox13.TabIndex = 22;
             this.textBox13.Text = "Photo URI";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(518, 149);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(74, 24);
-            this.textBox14.TabIndex = 23;
-            this.textBox14.Text = "serviceClass";
             // 
             // textBox15
             // 
@@ -358,19 +338,11 @@ namespace Client
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(1062, 69);
+            this.textBox17.Location = new System.Drawing.Point(1076, 69);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(74, 24);
+            this.textBox17.Size = new System.Drawing.Size(87, 24);
             this.textBox17.TabIndex = 28;
             this.textBox17.Text = "currentQuota";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(982, 70);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(74, 24);
-            this.textBox18.TabIndex = 29;
-            this.textBox18.Text = "maxQuota";
             // 
             // textBox19
             // 
@@ -380,17 +352,9 @@ namespace Client
             this.textBox19.TabIndex = 30;
             this.textBox19.Text = "email";
             // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(822, 99);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(74, 24);
-            this.textBox20.TabIndex = 31;
-            this.textBox20.Text = "serviceClass";
-            // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(902, 98);
+            this.textBox21.Location = new System.Drawing.Point(822, 94);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(74, 24);
             this.textBox21.TabIndex = 32;
@@ -427,7 +391,7 @@ namespace Client
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1111, 158);
+            this.label2.Location = new System.Drawing.Point(1160, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 36;
@@ -436,7 +400,7 @@ namespace Client
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1113, 194);
+            this.label3.Location = new System.Drawing.Point(1162, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 37;
@@ -444,21 +408,21 @@ namespace Client
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1185, 155);
+            this.textBox4.Location = new System.Drawing.Point(1234, 149);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 24);
             this.textBox4.TabIndex = 38;
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(1185, 191);
+            this.textBox23.Location = new System.Drawing.Point(1234, 185);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(100, 24);
             this.textBox23.TabIndex = 39;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(1196, 220);
+            this.button11.Location = new System.Drawing.Point(1245, 214);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 40;
@@ -466,9 +430,37 @@ namespace Client
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "VIP"});
+            this.comboBox2.Location = new System.Drawing.Point(358, 149);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(88, 24);
+            this.comboBox2.TabIndex = 41;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "VIP"});
+            this.comboBox3.Location = new System.Drawing.Point(982, 70);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(88, 24);
+            this.comboBox3.TabIndex = 42;
+            // 
             // Program
             // 
             this.ClientSize = new System.Drawing.Size(1371, 505);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox4);
@@ -478,21 +470,17 @@ namespace Client
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -600,9 +588,26 @@ namespace Client
             Customer customer = new Customer();
             customer.fullName = textBox11.Text;
             customer.email = textBox10.Text;
-            customer.maxQuota = textBox8.Text;
+            customer.serviceClass = comboBox2.SelectedItem.ToString();
+            switch (comboBox2.SelectedItem.ToString())
+            {
+                case "A":
+                    customer.maxQuota = "1000000000";
+                    break;
+                case "B":
+                    customer.maxQuota = "500000000";
+                    break;
+                case "C":
+                    customer.maxQuota = "250000000";
+                    break;
+                case "VIP":
+                    customer.maxQuota = "9999999999999";
+                    break;
+
+            }
+            //customer.maxQuota = textBox8.Text;
             customer.currentQuota = textBox9.Text;
-            customer.serviceClass = textBox14.Text;
+            
             customer.photo = textBox13.Text;
             customer.id = textBox12.Text;
             try {proxy.updateCustomer(customer); } catch { }
@@ -621,9 +626,25 @@ namespace Client
             Customer customer = new Customer();
             customer.fullName = textBox16.Text;
             customer.email = textBox19.Text;
-            customer.maxQuota = textBox18.Text;
+            customer.serviceClass = comboBox3.SelectedItem.ToString();
+            switch (comboBox3.SelectedItem.ToString())
+            {
+                case "A":
+                    customer.maxQuota = "1000000000";
+                    break;
+                case "B":
+                    customer.maxQuota = "500000000";
+                    break;
+                case "C":
+                    customer.maxQuota = "250000000";
+                    break;
+                case "VIP":
+                    customer.maxQuota = "9999999999999";
+                    break;
+
+            }
+            //customer.maxQuota = textBox18.Text;
             customer.currentQuota = textBox17.Text;
-            customer.serviceClass = textBox20.Text;
             customer.photo = textBox21.Text;
             try { proxy2.addCustomer(customer);} catch { }
             

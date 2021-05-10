@@ -50,7 +50,7 @@ namespace Server
                 Console.WriteLine("exit.. ");
             }
         }
-        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Documents\GitHub\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         public class AdminManager : MarshalByRefObject, IAdminManager
         {
@@ -90,6 +90,8 @@ namespace Server
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
                 con.Open();
+                SqlCommand cmd2 = new SqlCommand("delete from [file] where CustomerId=" + id + ";", con);
+                cmd2.ExecuteNonQuery();
                 SqlCommand cmd1 = new SqlCommand("delete from customer where id=" + id + ";", con);
                 cmd1.ExecuteNonQuery();
                 con.Close();
@@ -126,7 +128,7 @@ namespace Server
                 return table;
             }
 
-            public File getFile(int fileId)
+            public DataTable getFile(int fileId)
             {
                 SqlConnection con;
                 con = new SqlConnection(connectionString);
@@ -134,15 +136,15 @@ namespace Server
                 SqlDataAdapter adapt = new SqlDataAdapter("select * from [file] where Id=" + fileId + ";", con);
                 DataTable table = new DataTable();
                 _ = adapt.Fill(table);
-                File file = new File();
-                DataRow fileData = table.Rows[0];
-                file.type = fileData[1].ToString();
-                file.size = (string)fileData[2];
-                file.subject = (string)fileData[3];
-                file.availability = Boolean.Parse(fileData[4].ToString());
-                file.customerId = (int)fileData[5];
+                //File file = new File();
+                //DataRow fileData = table.Rows[0];
+                //file.type = fileData[1].ToString();
+                //file.size = (string)fileData[2];
+                //file.subject = (string)fileData[3];
+                //file.availability = Boolean.Parse(fileData[4].ToString());
+                //file.customerId = (int)fileData[5];
                 con.Close();
-                return file;
+                return table;
             }
 
             public void removeFile(int fileId)
