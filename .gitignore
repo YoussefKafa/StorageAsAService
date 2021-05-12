@@ -4,3 +4,9 @@ WcfClient/WcfClient/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Server/Server/obj/Debug/Server.csprojAssemblyReference.cache
 Server/Server/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 WcfClient/WcfClient/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.exe
+*.exe
+*.pdb
+*.pdb
+*.pdb
+*.cache

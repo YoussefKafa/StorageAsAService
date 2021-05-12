@@ -11,7 +11,7 @@ namespace Server
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class CustomerWcf : ICustomerWcf
     {
-        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\Documents\GitHub\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\C#\StorageAsService\StorageAsAService\Server\Server\projectDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         public bool checkAdmin(string name, string pass)
         {
